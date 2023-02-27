@@ -16,16 +16,27 @@
 	
 <script type="text/javascript">
 	
-function makeApiCall(url) {	
-var xhttp = new XMLHttpRequest();
-xhttp.open("GET", url, true);
-xhttp.send();	
+function sleep(milliseconds) {
+  	const date = Date.now();
+  	let currentDate = null;
+  	do {
+    		currentDate = Date.now();
+  	} while (currentDate - date < milliseconds);
 }
+	
+function makeApiCall(url) {	
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", url, true);
+	xhttp.send();	
+}
+	
 makeApiCall("https://jsonplaceholder.typicode.com/todos/1");
 makeApiCall("https://reqres.in/api/users/2");
 makeApiCall("script.js");
 makeApiCall("https://gorest.co.in/public/v2/users");
 makeApiCall("https://dummyjson.com/products/1");
+	
+sleep(5000);
 	
 </script>
 	
