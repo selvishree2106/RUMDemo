@@ -12,6 +12,17 @@
 		m && m(b, c, d, f, g),g || (g = new Error(b)),(w[r].q = w[r].q || []).push(["captureException",g]);})
 	}
 })(window,document,'//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=','s247r','dde7b749318e65b8e217d4b569a6108b');
+	
+(function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("POST", "demo_post2.asp");
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("fname=Naruto&lname=Uzumaki");
+})();
+	
 </script>
 
     <meta charset="UTF-8">
