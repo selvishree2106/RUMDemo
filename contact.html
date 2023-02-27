@@ -14,6 +14,21 @@
 })(window,document,'//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=','s247r','dde7b749318e65b8e217d4b569a6108b');
 </script>
 
+<script type="text/javascript">
+	
+function makeApiCall(url) {	
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET", url, true);
+xhttp.send();	
+}
+makeApiCall("https://jsonplaceholder.typicode.com/todos/1");
+makeApiCall("https://reqres.in/api/users/2");
+makeApiCall("script.js");
+makeApiCall("https://gorest.co.in/public/v2/users");
+makeApiCall("https://dummyjson.com/products/1");
+	
+</script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
