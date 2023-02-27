@@ -14,30 +14,19 @@
 })(window,document,'//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=','s247r','27a4a87d6e27e86a7cd64de89cb3ec8d');
 </script>
 
-<script type="text/javascript">
-	
-function sleep(milliseconds) {
-  	const date = Date.now();
-  	let currentDate = null;
-  	do {
-    		currentDate = Date.now();
-  	} while (currentDate - date < milliseconds);
-}
-	
+<script type="text/javascript">	
 function makeApiCall(url) {	
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("GET", url, true);
 	xhttp.send();	
 }
-	
-makeApiCall("https://jsonplaceholder.typicode.com/todos/1");
-makeApiCall("https://reqres.in/api/users/2");
-makeApiCall("script.js");
-makeApiCall("https://gorest.co.in/public/v2/users");
-makeApiCall("https://dummyjson.com/products/1");
-	
-sleep(5000);
-	
+document.onreadystatechange = () => {
+	makeApiCall("https://jsonplaceholder.typicode.com/todos/1");
+	makeApiCall("https://reqres.in/api/users/2");
+	makeApiCall("script.js");
+	makeApiCall("https://gorest.co.in/public/v2/users");
+	makeApiCall("https://dummyjson.com/products/1");
+}		
 </script>
 
     <meta charset="UTF-8">
