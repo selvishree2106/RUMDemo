@@ -15,21 +15,16 @@
 </script>
 	
 <script type="text/javascript">
-(function() {	
-var xhttp = new XMLHttpRequest();
-xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
-xhttp.send();
-xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
-xhttp.send();	
-})();
-</script>
 	
-<script type="text/javascript">
-(function() {	
+function makeApiCall(url) {	
 var xhttp = new XMLHttpRequest();
-xhttp.open("GET", "script.js", true);
-xhttp.send();
-})();
+xhttp.open("GET", url, true);
+xhttp.send();	
+}
+makeApiCall("https://jsonplaceholder.typicode.com/todos/1");
+makeApiCall("https://jsonplaceholder.typicode.com/posts");
+makeApiCall("script.js");
+
 </script>
 
     <meta charset="UTF-8">
