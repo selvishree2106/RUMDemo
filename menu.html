@@ -42,14 +42,24 @@ document.onreadystatechange = () => {
 	makeApiCall("https://dummyjson.com/products/1");
 	
 	//simulateJSErrors
-	try {case1();} catch (err) {}
-	case2();	
-	case2fail();
-	case3();
-	case4();
-	case5_func1();
+	// try {case1();} catch (err) {}
+	// case2();	
+	// case2fail();
+	// case3();
+	// case4();
+	// case5_func1();
 	
 }		
+</script>
+<script type="text/javascript">	
+
+document.onreadystatechange = () => {	
+	case1();
+}
+document.onreadystatechange = () => {	
+	case2();		
+}
+	
 </script>
 
     <meta charset="UTF-8">
