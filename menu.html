@@ -42,7 +42,7 @@ document.onreadystatechange = () => {
 	makeApiCall("https://dummyjson.com/products/1");
 	
 	//simulateJSErrors
-	case1();
+	try {case1();} catch () {}
 	case2();	
 	case2fail();
 	case3();
