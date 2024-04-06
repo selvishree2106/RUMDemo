@@ -10,8 +10,14 @@ function getRandomName() {
   "Lopez", "Clark", "White", "Rodriguez", "Lewis", "Hall",
   "Walker", "Young", "King", "Hill", "Scott", "Adams"];
   
-  const randomFirstName = firstName[Math.floor(Math.random() * firstName.length)];
-  const randomLastName = lastName[Math.floor(Math.random() * lastName.length)];
+  let randomName = sessionStorage.getItem('randomName');
   
-  return `${randomFirstName} ${randomLastName}`;
+  if (!randomName) {
+    const randomFirstName = firstName[Math.floor(Math.random() * firstName.length)];
+    const randomLastName = lastName[Math.floor(Math.random() * lastName.length)];
+    sessionStorage.setItem('randomName', randomFirstName+' '+randomLastName);
+    return `${randomFirstName} ${randomLastName}`;
+  }
+  return randomName;
+  
 }
