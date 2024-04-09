@@ -25,9 +25,7 @@ function getRandomName() {
 function getAppKey(){
   let appKey = sessionStorage.getItem('appKey');
   if (!appKey) {
-    const currentTime = new Date().getSeconds();
-    const isEven = currentTime % 2 === 0;
-    if (isEven) {
+    if (Math.random() < 0.5) {
       appKey = '27a4a87d6e27e86a7cd64de89cb3ec8d';//Delivery Site
     } else {
       appKey = 'c012eed591418a9aa7e1655a6bb83039';//zylker
