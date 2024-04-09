@@ -25,13 +25,14 @@ function getRandomName() {
 function getAppKey(){
   let appKey = sessionStorage.getItem('appKey');
   if (!appKey) {
-    const currentTime = new Date().getSeconds();
-    const isEven = currentTime % 2 === 0;
-    if (isEven) {
-      sessionStorage.setItem('appKey', '27a4a87d6e27e86a7cd64de89cb3ec8d');//Delivery Site
-    } else {
-      sessionStorage.setItem('appKey', 'f1d2754e961fb7e8597461008c50bb87' );//zylker_demo
-    }
+    sessionStorage.setItem('appKey', 'c012eed591418a9aa7e1655a6bb83039');//Delivery Site
+    // const currentTime = new Date().getSeconds();
+    // const isEven = currentTime % 2 === 0;
+    // if (isEven) {
+    //   sessionStorage.setItem('appKey', '27a4a87d6e27e86a7cd64de89cb3ec8d');//Delivery Site
+    // } else {
+    //   sessionStorage.setItem('appKey', 'f1d2754e961fb7e8597461008c50bb87' );//zylker_demo
+    // }
   }
   return appKey;
 
