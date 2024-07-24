@@ -25,13 +25,22 @@ function getRandomName() {
 function getAppKey(){
   let appKey = sessionStorage.getItem('appKey');
   if (!appKey) {
-    if (Math.random() < 0.5) {
-      appKey = '27a4a87d6e27e86a7cd64de89cb3ec8d';//Delivery Site
-    } else {
-      appKey = 'c012eed591418a9aa7e1655a6bb83039';//zylker
-    }
+    appKey = 'afc8510a56cf1004f9024d9d121f2563';
     sessionStorage.setItem('appKey', appKey);
   }
   return appKey;
 
 }
+
+(function(w,d,s,r,k,h,m){
+	if(w.performance && w.performance.timing && w.performance.navigation) {
+		w[r] = w[r] || function(){(w[r].q = w[r].q || []).push(arguments)};
+		h=d.createElement('script');h.async=true;h.setAttribute('src',s+k);
+		d.getElementsByTagName('head')[0].appendChild(h);
+		(m = window.onerror),(window.onerror = function (b, c, d, f, g) {
+		m && m(b, c, d, f, g),g || (g = new Error(b)),(w[r].q = w[r].q || []).push(["captureException",g]);})
+	}
+})(window,document,'//static.site24x7rum.eu/beacon/site24x7rum-min.js?appKey=','s247r',getAppKey());
+s247r('setWaterfallsSamplingRate',1);
+s247r('userId',getRandomName());
+s247r('recordSession',true);
