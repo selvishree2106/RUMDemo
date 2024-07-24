@@ -23,11 +23,7 @@ function getRandomName() {
 }
 
 function getAppKey(){
-  let appKey = sessionStorage.getItem('appKey');
-  if (!appKey) {
-    appKey = 'afc8510a56cf1004f9024d9d121f2563';
-    sessionStorage.setItem('appKey', appKey);
-  }
+  let appKey = 'afc8510a56cf1004f9024d9d121f2563';
   return appKey;
 
 }
