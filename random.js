@@ -22,12 +22,25 @@ function getRandomName() {
   
 }
 
-function getAppKey(){
-  let appKey = 'c9393037c1de76d77fe0dc1de5516349';
-  return appKey;
-
+function getDC(){
+  let dc = sessionStorage.getItem('dc');
+  if (!dc) {
+    if (Math.random() < 0.5) {
+      dc = 'in';//Delivery Site
+    } else {
+      dc = 'eu';//zylker
+    }
+    sessionStorage.setItem('dc', dc);
+  }
+  return dc;
 }
 
+const dc = getDC();
+var appkey = 'afc8510a56cf1004f9024d9d121f2563'
+if(dc === 'in'){
+appkey = 'c9393037c1de76d77fe0dc1de5516349'
+}
+	
 (function(w,d,s,r,k,h,m){
 	if(w.performance && w.performance.timing && w.performance.navigation) {
 		w[r] = w[r] || function(){(w[r].q = w[r].q || []).push(arguments)};
@@ -36,7 +49,7 @@ function getAppKey(){
 		(m = window.onerror),(window.onerror = function (b, c, d, f, g) {
 		m && m(b, c, d, f, g),g || (g = new Error(b)),(w[r].q = w[r].q || []).push(["captureException",g]);})
 	}
-})(window,document,'//static.site24x7rum.in/beacon/site24x7rum-min.js?appKey=','s247r',getAppKey());
+})(window,document,'//static.site24x7rum.'+dc+'/beacon/site24x7rum-min.js?appKey=','s247r',appkey);
 s247r('setWaterfallsSamplingRate',1);
 s247r('userId',getRandomName());
 s247r('recordSession',true);
