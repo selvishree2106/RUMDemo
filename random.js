@@ -31,7 +31,7 @@ function getRandomName() {
 		(m = window.onerror),(window.onerror = function (b, c, d, f, g) {
 		m && m(b, c, d, f, g),g || (g = new Error(b)),(w[r].q = w[r].q || []).push(["captureException",g]);})
 	}
-})(window,document,'//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=','s247r','c01ee4c580b3575241c1d53ae9789aa0');
+})(window,document,'//static.site24x7rum.com/beacon/site24x7rum-min.js?appKey=','s247r','95ba5fd4273eca4cfa23f0c19c2936c3');
 s247r('setWaterfallsSamplingRate',1);
 s247r('userId',getRandomName());
 s247r('recordSession',true);
